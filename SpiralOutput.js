@@ -23,7 +23,7 @@
 function spin1(arr) {
     // write code here
     let carr = [];
-    let l1 = arr.length;
+    const l1 = arr.length;
     for (let i = 0; i < l1; i++) {
         // 克隆数组
         carr.push([...arr[i]])
@@ -62,8 +62,9 @@ function spin2(arr) {
         endX = arr[0].length - 1,
         startY = 0,
         endY = arr.length - 1,
-        sum = arr[0].length * arr.length,
         narr = [];
+    const sum = arr[0].length * arr.length;
+
 
     while (startX <= endX && startY <= endY) {
         let i;
@@ -83,14 +84,14 @@ function spin2(arr) {
     }
     return narr;
 }
-let arr = [
+const arr = [
     [1, 2, 3, 4, 5, 6],
     [18, 19, 20, 21, 22, 7],
     [17, 28, 29, 30, 23, 8],
     [16, 27, 26, 25, 24, 9],
     [15, 14, 13, 12, 11, 10]
 ];
-// let arr = [
+// const arr = [
 //     [1, 2, 3, 4, 5, 6, 7],
 //     [22, 23, 24, 25, 26, 27, 8],
 //     [21, 36, 37, 38, 39, 28, 9],
@@ -98,6 +99,6 @@ let arr = [
 //     [19, 34, 33, 32, 31, 30, 11],
 //     [18, 17, 16, 15, 14, 13, 12]
 // ];
-// let output = spin1(arr);
-let output = spin2(arr);
+// const output = spin1(arr);
+const output = spin2(arr);
 console.log(output);
